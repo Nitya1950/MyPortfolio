@@ -1,0 +1,268 @@
+/* Custom styles */
+:root {
+    --lavender: #E6E6FA;
+    --periwinkle: #9db4fe;
+    --purple: #9598e9;
+}
+
+body {
+    background-color: #f2ebf7;  /* Fallback color */
+    background-image: url('src/webpage_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    image-rendering: -webkit-optimize-contrast;  /* For Chrome/Safari */
+    image-rendering: crisp-edges;  /* For Firefox */
+    -ms-interpolation-mode: nearest-neighbor;  /* For IE */
+    padding-top: 4rem;  /* Add padding to prevent content from hiding under nav */
+}
+
+/* Make the overlay more transparent and ensure it's behind content */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);  /* Much more transparent */
+    z-index: 0;
+    pointer-events: none;  /* Allow clicking through */
+}
+
+.bg-lavender {
+    background-color: var(--lavender);
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Form input styles */
+input, textarea {
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Project card hover effect */
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skill card hover effect */
+.skill-card {
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styles */
+nav a {
+    font-weight: 600;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--purple);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-link::after {
+        display: none;
+    }
+}
+/* Hero background styles */
+.hero-bg {
+    background-image: url('./src/hero_bg.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    image-rendering: -webkit-optimize-contrast;  /* For Chrome/Safari */
+    image-rendering: crisp-edges;  /* For Firefox */
+    -ms-interpolation-mode: nearest-neighbor;  /* For IE */
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);  /* Reduced the overlay opacity */
+    backdrop-filter: blur(0px);  /* Removed the blur effect */
+}
+
+/* Ensure the hero section maintains proper aspect ratio */
+#home {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Container for sections */
+.container {
+    max-width: 1200px;  /* Maximum width for content */
+    margin: 0 auto;     /* Center the container */
+    padding: 0 1rem;    /* Add some padding on the sides */
+    width: 100%;        /* Take full width up to max-width */
+}
+
+/* Update section backgrounds to be more transparent */
+section {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+    margin: 2rem auto;  /* Center sections and add vertical margin */
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;        /* Take full width of container */
+    max-width: 1000px;  /* Maximum width for sections */
+}
+
+/* Update card backgrounds to be more transparent */
+.card-bg {
+    background-color: rgba(242, 235, 247, 0.15) !important;
+    backdrop-filter: blur(2px);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;        /* Take full width of container */
+}
+
+/* Update form background to be more transparent */
+form {
+    background-color: rgba(242, 235, 247, 0.15) !important;
+    backdrop-filter: blur(2px);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;        /* Take full width of container */
+    max-width: 800px;   /* Maximum width for forms */
+    margin: 0 auto;     /* Center forms */
+}
+
+/* Update navigation background */
+nav {
+    background-color: rgba(255, 255, 255, 0.90) !important;
+    backdrop-filter: blur(2px);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;  /* Make it fixed at the top */
+    top: 0;          /* Stick to the top */
+    left: 0;         /* Align to the left */
+    right: 0;        /* Stretch to the right */
+    z-index: 1000;   /* Ensure it stays above other content */
+    margin: 0;       /* Remove margin */
+    border-radius: 0; /* Remove border radius for full width */
+}
+
+/* Ensure all content stays above the background */
+section, nav, form, .card-bg {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove hero section from z-index list since it has its own background */
+.hero-bg {
+    position: relative;
+    z-index: 1;
+}
+
+/* Update text colors for better visibility against transparent backgrounds */
+section h2, section h3 {
+    color: var(--periwinkle);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+section p {
+    color: #2d3748;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
