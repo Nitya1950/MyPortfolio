@@ -6,6 +6,12 @@
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
 </head>
 <body class="bg-gray-100">
     <!-- Navigation -->
@@ -13,12 +19,20 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="text-xl font-bold text-[#9db4fe]">Portfolio</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Home</a>
-                    <a href="#about" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">About</a>
-                    <a href="#skills" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Skills</a>
-                    <a href="#projects" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Projects</a>
-                    <a href="#contact" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Contact</a>
+                <div class="flex items-center space-x-8">
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#home" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Home</a>
+                        <a href="#about" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">About</a>
+                        <a href="#skills" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Skills</a>
+                        <a href="#projects" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Projects</a>
+                        <a href="#contact" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Contact</a>
+                    </div>
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        <svg class="w-6 h-6 text-[#9db4fe]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -28,6 +42,10 @@
     <section id="home" class="pt-20 min-h-screen flex items-center hero-bg">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 inline-block shadow-xl">
+                <!-- Profile Picture Container -->
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#9db4fe] shadow-lg">
+                    <img src="src/profile.jpg" alt="Nitya Ramachandran" class="w-full h-full object-cover">
+                </div>
                 <h1 class="text-4xl md:text-6xl font-bold text-[#9db4fe] mb-4">Hello World! I'm <span class="text-[#9598e9]">Nitya</span></h1>
                 <p class="text-xl md:text-2xl text-[#9598e9] mb-8">Software Developer</p>
                 <a href="#contact" class="bg-[#9db4fe] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg">Get in Touch</a>
@@ -61,7 +79,7 @@
                             <div class="font-semibold text-[#9598e9]">Mount Carmel College, Bangalore</div>
                             <div>Bachelor's in Computer Application</div>
                             <div class="text-sm">2019-2022 | First Class Exemplary</div>
-                            <div class="text-sm mt-2">Coursework: Shell programming, Web Programming, Operating Systems, Data Structures, Procedural Orientated Programming, DBMS, Mobile App development, Finite Automata and Formal Languages, Algorithms, Data Warehousing, Multimedia Applications</div>
+                            <div class="text-sm mt-2">Coursework: Shell programming, Web Programming, Operating Systems, Data Structures, DBMS, Android development, Advance Java, Algorithms, Data Warehousing, Multimedia Applications</div>
                         </li>
                         <li class="text-gray-700">
                             <div class="font-semibold text-[#9598e9]">Delhi Public School, Bangalore East</div>
@@ -82,19 +100,38 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
                     <h3 class="font-semibold mb-2 text-[#9db4fe]">Frontend</h3>
-                    <p class="text-gray-700">HTML, CSS, JavaScript, React</p>
+                    <div class="flex flex-wrap gap-4">
+                        <i class="devicon-html5-plain colored text-3xl"></i>
+                        <i class="devicon-css3-plain colored text-3xl"></i>
+                        <i class="devicon-javascript-plain colored text-3xl"></i>
+                        <i class="devicon-react-original colored text-3xl"></i>
+                    </div>
                 </div>
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
                     <h3 class="font-semibold mb-2 text-[#9db4fe]">Backend</h3>
-                    <p class="text-gray-700">Node.js, Python, Java</p>
+                    <div class="flex flex-wrap gap-4">
+                        <i class="devicon-nodejs-plain colored text-3xl"></i>
+                        <i class="devicon-python-plain colored text-3xl"></i>
+                        <i class="devicon-java-plain colored text-3xl"></i>
+                    </div>
                 </div>
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
                     <h3 class="font-semibold mb-2 text-[#9db4fe]">Database</h3>
-                    <p class="text-gray-700">MongoDB, MySQL, DynamoDB</p>
+                    <div class="flex flex-wrap gap-4">
+                        <i class="devicon-mongodb-plain colored text-3xl"></i>
+                        <i class="devicon-mysql-plain colored text-3xl"></i>
+                        <i class="devicon-amazonwebservices-original colored text-3xl"></i>
+                    </div>
                 </div>
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
                     <h3 class="font-semibold mb-2 text-[#9db4fe]">Tools</h3>
-                    <p class="text-gray-700">Git, AWS, VSCode, Photoshop, Figma</p>
+                    <div class="flex flex-wrap gap-4">
+                        <i class="devicon-git-plain colored text-3xl"></i>
+                        <i class="devicon-amazonwebservices-original colored text-3xl"></i>
+                        <i class="devicon-vscode-plain colored text-3xl"></i>
+                        <i class="devicon-photoshop-plain colored text-3xl"></i>
+                        <i class="devicon-figma-plain colored text-3xl"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,37 +144,39 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg overflow-hidden shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
-                    <div class="h-48 bg-[#bbbeee]/30"></div>
+                    <div class="h-48">
+                        <img src="src/project_1.jpg" alt="Crowdsourced Gaming on Twitch" class="w-full h-full object-cover">
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Project 1</h3>
-                        <p class="text-gray-700 mb-4">Description of your first project goes here.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Crowdsourced Gaming on Twitch</h3>
+                        <p class="text-gray-700 mb-4">An interactive streaming project that enabled Twitch viewers to control and influence live gameplay in real time. Designed to enhance audience engagement, this system processed chat inputs and translated them into in-game actions using custom logic and backend integration.</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">View Demo</a>
-                            <a href="#" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">GitHub</a>
+                            <a href="https://github.com/Nitya1950/Masters_project.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <!-- Project Card 2 -->
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg overflow-hidden shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
-                    <div class="h-48 bg-[#bbbeee]/30"></div>
+                    <div class="h-48">
+                        <img src="src/project_2.jpg" alt="Pediatric Centre Website" class="w-full h-full object-cover">
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Project 2</h3>
-                        <p class="text-gray-700 mb-4">Description of your second project goes here.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Pediatric Centre Website</h3>
+                        <p class="text-gray-700 mb-4">The Website is a full-stack web application designed to simplify pediatric center operations by managing appointments, patient records, and doctor information. Built with a responsive front-end (HTML, CSS, JavaScript) and back-end (Java, Spring Boot, MySQL), it features a secure login system and scalable architecture.</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">View Demo</a>
-                            <a href="#" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">GitHub</a>
+                            <a href="https://github.com/Nitya1950/Pediatric-Center-Management.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <!-- Project Card 3 -->
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg overflow-hidden shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
-                    <div class="h-48 bg-[#bbbeee]/30"></div>
+                    <div class="h-48">
+                        <img src="src/project_3.png" alt="Amazon Alexa University Skill" class="w-full h-full object-cover">
+                    </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Project 3</h3>
-                        <p class="text-gray-700 mb-4">Description of your third project goes here.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Amazon Alexa University Skill</h3>
+                        <p class="text-gray-700 mb-4">Designed and deployed a custom Alexa skill to help students access university schedules, events, and campus info using voice commands. Built with AWS Lambda and the Alexa Skills Kit, this project focused on natural language processing and serverless architecture.<em>(Note: Code unavailable due to AWS account expiration.)</em></p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">View Demo</a>
-                            <a href="#" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -182,4 +221,4 @@
         </div>
     </footer>
 </body>
-</html> 
+</html>
