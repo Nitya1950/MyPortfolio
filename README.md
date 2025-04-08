@@ -1,10 +1,8 @@
 # 🌸 Personal Portfolio Website
 
-
-
 This is a **simple, responsive portfolio website** built using **vanilla HTML** and **Tailwind CSS**. The site showcases my background, skills, and projects using a **pastel color palette** and features soft, colorful cards for a clean and aesthetic user experience.
 
-> ⚡ No JavaScript frameworks used — only HTML and Tailwind CSS (utility-first styling).
+> Vanilla HTML and Tailwind CSS
 
 ---
 
