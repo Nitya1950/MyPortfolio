@@ -6,6 +6,8 @@
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -24,6 +26,7 @@
                         <a href="#home" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Home</a>
                         <a href="#about" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">About</a>
                         <a href="#skills" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Skills</a>
+                        <a href="#certifications" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Certifications</a>
                         <a href="#projects" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Projects</a>
                         <a href="#contact" class="text-[#9db4fe] hover:text-[#9598e9] transition duration-300 font-semibold">Contact</a>
                     </div>
@@ -42,13 +45,20 @@
     <section id="home" class="pt-20 min-h-screen flex items-center hero-bg">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 inline-block shadow-xl">
-                <!-- Profile Picture Container -->
-                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#9db4fe] shadow-lg">
+                <!-- Profile Picture  -->
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#9db4fe] shadow-lg profile-pic">
                     <img src="src/profile.jpg" alt="Nitya Ramachandran" class="w-full h-full object-cover">
                 </div>
                 <h1 class="text-4xl md:text-6xl font-bold text-[#9db4fe] mb-4">Hello World! I'm <span class="text-[#9598e9]">Nitya</span></h1>
                 <p class="text-xl md:text-2xl text-[#9598e9] mb-8">Software Developer</p>
                 <a href="#contact" class="bg-[#9db4fe] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg">Get in Touch</a>
+                <!-- Social Media Icon links -->
+                <div class="mt-4 space-x-6">
+                <a href="https://github.com/Nitya1950" class="hover:text-[#f2ebf7]"><i class="devicon-github-original text-3xl"></i></a>
+                <a href="https://www.linkedin.com/in/nitya-ramachandran/" class="hover:text-[#f2ebf7]"><i class="devicon-linkedin-plain text-3xl"></i></a>
+                <a href="https://twitter.com/" class="hover:text-[#f2ebf7]"><i class="devicon-twitter-original text-3xl"></i></a>
+                <a href="https://instagram.com/" class="hover:text-[#f2ebf7]"><i class="fab fa-instagram text-3xl"></i></a>
+            </div>
             </div>
         </div>
     </section>
@@ -65,6 +75,8 @@
                     <p class="text-gray-600">Whether it's designing seamless user experiences, optimizing performance, or diving into AI and gaming tech, I'm always excited to learn and innovate.</p>
                     <p class="text-gray-600">I am a passionate Full Stack Developer with expertise in building modern web applications. I love creating elegant solutions to complex problems.</p>
                     <p class="text-gray-600">Let's connect and create something amazing together! ˖⁺‧₊˚♡˚₊‧⁺˖</p>
+                    <!-- Add Read More Button -->
+                    <button class="bg-[#9db4fe] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg">Read More</button>
                 </div>
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee]">
                     <h3 class="text-xl font-semibold mb-4 text-[#9db4fe]">Education</h3>
@@ -106,6 +118,12 @@
                         <i class="devicon-javascript-plain colored text-3xl"></i>
                         <i class="devicon-react-original colored text-3xl"></i>
                     </div>
+                    <!-- Linear Progress Bar frontend -->
+                    <div class="mt-4">
+                        <div class="bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-[#9db4fe] h-2.5 rounded-full" style="width: 30%"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
                     <h3 class="font-semibold mb-2 text-[#9db4fe]">Backend</h3>
@@ -114,6 +132,12 @@
                         <i class="devicon-python-plain colored text-3xl"></i>
                         <i class="devicon-java-plain colored text-3xl"></i>
                     </div>
+                    <!-- Linear Progress Bar backend -->
+                    <div class="mt-4">
+                        <div class="bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-[#9db4fe] h-2.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
                     <h3 class="font-semibold mb-2 text-[#9db4fe]">Database</h3>
@@ -121,6 +145,12 @@
                         <i class="devicon-mongodb-plain colored text-3xl"></i>
                         <i class="devicon-mysql-plain colored text-3xl"></i>
                         <i class="devicon-amazonwebservices-original colored text-3xl"></i>
+                    </div>
+                    <!-- Linear Progress Bar databases -->
+                    <div class="mt-4">
+                        <div class="bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-[#9db4fe] h-2.5 rounded-full" style="width: 75%"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
@@ -132,6 +162,51 @@
                         <i class="devicon-photoshop-plain colored text-3xl"></i>
                         <i class="devicon-figma-plain colored text-3xl"></i>
                     </div>
+                    <!-- Linear Progress Bar Tools -->
+                    <div class="mt-4">
+                        <div class="bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-[#9db4fe] h-2.5 rounded-full" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-[#9db4fe] mb-12">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee]">
+                    <h3 class="font-semibold mb-2 text-[#9db4fe]">#1 School-wide in CS 12th CBSE</h3>
+                    <p class="text-sm text-gray-600 mb-4"> Awarded top rank in Computer Science for the 12th Grade CBSE Board Exams, recognizing outstanding academic performance.</p>
+                    <a href="src/12_Top_Rank_CBSE.pdf" target="_blank" class="bg-[#9db4fe] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg block text-center">View Certificate</a>
+                </div>
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee]">
+                    <h3 class="font-semibold mb-2 text-[#9db4fe]">NoSQL Training</h3>
+                    <p class="text-sm text-gray-600 mb-4">Completed training on NoSQL database concepts including key-value, document, and graph stores.</p>
+                    <a href="src/CertificateOfCompletion_NoSQL Essential Training.pdf" target="_blank" class="bg-[#9db4fe] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg block text-center">View Certificate</a>
+                </div>
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee]">
+                    <h3 class="font-semibold mb-2 text-[#9db4fe]">Github and Data Visualization</h3>
+                    <p class="text-sm text-gray-600 mb-4">Learned version control using GitHub and basics of data visualization tools and techniques.</p>
+                    <a href="src/Github&DataVisualization_Certificate.pdf" target="_blank" class="bg-[#9db4fe] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg block text-center">View Certificate</a>
+                </div>
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee]">
+                    <h3 class="font-semibold mb-2 text-[#9db4fe]">NICT Graphic Design</h3>
+                    <p class="text-sm text-gray-600 mb-4">Trained in creative visual design using industry-standard graphic tools and software using Adobe Photoshop, InDesign and Maya.</p>
+                    <a href="src/NICT_GraphicDesign_Certificate.pdf" target="_blank" class="bg-[#9db4fe] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg block text-center">View Certificate</a>
+                </div>
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee]">
+                    <h3 class="font-semibold mb-2 text-[#9db4fe]">NICT Architecture Visualization</h3>
+                    <p class="text-sm text-gray-600 mb-4">Explored 2D/3D modeling techniques for architectural presentations and design concepts using AutoCAD and Autodesk 3Ds Max.</p>
+                    <a href="src/NICT_Architect_certificate.pdf" target="_blank" class="bg-[#9db4fe] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg block text-center">View Certificate</a>
+                </div>
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg p-6 shadow-md border border-[#bbbeee]">
+                    <h3 class="font-semibold mb-2 text-[#9db4fe]">Letter of Appreciation</h3>
+                    <p class="text-sm text-gray-600 mb-4">Recognized for leadership and valuable contributions in organizaing inter-collegiate fest CUL-AH.</p>
+                    <a href="src/Letter_of_Appreciation.jpg" target="_blank" class="bg-[#9db4fe] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#9598e9] transition duration-300 shadow-lg block text-center">View Certificate</a>
                 </div>
             </div>
         </div>
@@ -151,7 +226,7 @@
                         <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Crowdsourced Gaming on Twitch</h3>
                         <p class="text-gray-700 mb-4">An interactive streaming project that enabled Twitch viewers to control and influence live gameplay in real time. Designed to enhance audience engagement, this system processed chat inputs and translated them into in-game actions using custom logic and backend integration.</p>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/Nitya1950/Masters_project.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">GitHub</a>
+                            <a href="https://github.com/Nitya1950/Masters_project.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +239,7 @@
                         <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Pediatric Centre Website</h3>
                         <p class="text-gray-700 mb-4">The Website is a full-stack web application designed to simplify pediatric center operations by managing appointments, patient records, and doctor information. Built with a responsive front-end (HTML, CSS, JavaScript) and back-end (Java, Spring Boot, MySQL), it features a secure login system and scalable architecture.</p>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/Nitya1950/Pediatric-Center-Management.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium">GitHub</a>
+                            <a href="https://github.com/Nitya1950/Pediatric-Center-Management.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -180,11 +255,50 @@
                         </div>
                     </div>
                 </div>
+                <!-- Project Card 4 -->
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg overflow-hidden shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="h-48">
+                        <img src="src/Parkco.png" alt="ParkCo Website" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">ParkCo Website</h3>
+                        <p class="text-gray-700 mb-4">Collaborated in a team of six to develop a smart parking spot search website. Led the UI/UX design using Figma to create intuitive wireframes and user flows. The website was built with Flask (Python) and included automated testing to ensure functionality and reliability.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Nitya1950/SE-Project.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg overflow-hidden shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="h-48">
+                        <img src="src/regression.jpg" alt="Covid-19 Research using regression" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Research on Covid-19 Impact on Student's Grades</h3>
+                        <p class="text-gray-700 mb-4">Research project in Python analyzing how the COVID-19 pandemic affected college students' academic performance using regression models. Collected and processed real-world data to identify key trends and correlations.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Nitya1950/Covid19-Regression-Study.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium" target="_blank" >GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 6 -->
+                <div class="bg-[#f2ebf7] backdrop-blur-sm rounded-lg overflow-hidden shadow-md border border-[#bbbeee] hover:transform hover:scale-105 transition-transform duration-300">
+                    <div class="h-48">
+                        <img src="src/keylogger.jpg" alt="Keylogger Detection image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-[#9db4fe]">Keylogger Detection Project</h3>
+                        <p class="text-gray-700 mb-4">Developed a Python-based Keylogger Detection System to identify and flag suspicious logging activity. Contributed to the project by implementing web scraping techniques for signature-based detection and improving the accuracy of threat identification.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Nitya1950/Keylogger-Detection.git" class="text-[#9db4fe] hover:text-[#9598e9] font-medium" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Form Section -->
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-[#9db4fe] mb-12">Let's Connect!</h2>
@@ -203,6 +317,9 @@
                         <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-[#bbbeee] shadow-sm focus:border-[#9db4fe] focus:ring-[#9db4fe] bg-white/70"></textarea>
                     </div>
                     <div>
+                        <a href="src/cv.pdf" download class="w-full bg-[#9db4fe] text-white px-6 py-3 rounded-md hover:bg-[#9598e9] transition duration-300 shadow-lg block text-center">Download Resume</a>
+                    </div>
+                    <div>
                         <button type="submit" class="w-full bg-[#9db4fe] text-white px-6 py-3 rounded-md hover:bg-[#9598e9] transition duration-300 shadow-lg">Send Message</button>
                     </div>
                 </form>
@@ -215,8 +332,8 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p>&copy; 2024 Nitya Ramachandran. All rights reserved.</p>
             <div class="mt-4 space-x-6">
-                <a href="https://github.com/Nitya1950" class="hover:text-[#f2ebf7]">GitHub</a>
-                <a href="https://www.linkedin.com/in/nitya-ramachandran/" class="hover:text-[#f2ebf7]">LinkedIn</a>
+                <a href="tel:+1234567890" class="bg-white text-[#9db4fe] px-4 py-2 rounded-full font-semibold hover:bg-[#f2ebf7] transition duration-300 shadow-lg"><i class="fas fa-phone text-xl"></i></a>
+                <a href="mailto:nitya@example.com" class="bg-white text-[#9db4fe] px-4 py-2 rounded-full font-semibold hover:bg-[#f2ebf7] transition duration-300 shadow-lg"><i class="fas fa-envelope text-xl"></i></a>
             </div>
         </div>
     </footer>
