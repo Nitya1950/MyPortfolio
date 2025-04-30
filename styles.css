@@ -98,7 +98,7 @@ input:focus, textarea:focus {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-/* Project card hover effect */
+/* Project card hover effects */
 .project-card {
     transition: transform 0.3s ease;
 }
@@ -107,7 +107,7 @@ input:focus, textarea:focus {
     transform: translateY(-5px);
 }
 
-/* Skill card hover effect */
+/* Skill card hover effects */
 .skill-card {
     transition: all 0.3s ease;
 }
@@ -181,10 +181,10 @@ nav a:hover {
 
 /* Container for sections */
 .container {
-    max-width: 1200px;  /* Maximum width for content */
+    max-width: 1200px;  /* Max width for content */
     margin: 0 auto;     /* Center the container */
     padding: 0 1rem;    /* Add some padding on the sides */
-    width: 100%;        /* Take full width up to max-width */
+    width: 100%;        /* Take full width upto max width */
 }
 
 /* Update section backgrounds to be more transparent */
@@ -199,10 +199,10 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;        /* Take full width of container */
-    max-width: 1000px;  /* Maximum width for sections */
+    max-width: 1000px;
 }
 
-/* Update card backgrounds to be more transparent */
+/* Update card backgrounds to be transparent a bit */
 .card-bg {
     background-color: rgba(242, 235, 247, 0.15) !important;
     backdrop-filter: blur(2px);
@@ -235,13 +235,13 @@ nav {
     margin: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    position: fixed;  /* Make it fixed at the top */
-    top: 0;          /* Stick to the top */
-    left: 0;         /* Align to the left */
-    right: 0;        /* Stretch to the right */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;   /* Ensure it stays above other content */
-    margin: 0;       /* Remove margin */
-    border-radius: 0; /* Remove border radius for full width */
+    margin: 0;
+    border-radius: 0;
 }
 
 /* Ensure all content stays above the background */
@@ -250,7 +250,7 @@ section, nav, form, .card-bg {
     z-index: 1;
 }
 
-/* Remove hero section from z-index list since it has its own background */
+/* Removed hero section from z-index list since it has its own background */
 .hero-bg {
     position: relative;
     z-index: 1;
